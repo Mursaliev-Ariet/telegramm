@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Одежда</title>
+</head>
+<body>
+{% for clothes in clothes_list %}
+<p>{{ clothes.name }} {{ clothes.text }} {{ clothes.price }} {{ clothes.photo }}</p>
+{% endfor %}
+</body>
+</html>
