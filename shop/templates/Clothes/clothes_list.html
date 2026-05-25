@@ -1,12 +1,20 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Одежда</title>
+    <link rel="stylesheet" href="{% static 'css/clothes.css' %}">
 </head>
 <body>
 {% for clothes in clothes_list %}
-<p>{{ clothes.name }} {{ clothes.text }} {{ clothes.price }} {{ clothes.photo }}</p>
+<p>{{ clothes.name }}</p>
+<p>{{ clothes.text }}</p>
+<p>{{ clothes.price }}</p>
+{% if clothes.photo %}
+    <img src="{{ clothes.photo.url }}" alt="Фото одежды">
+{% endif %}
 {% endfor %}
 </body>
 </html>
