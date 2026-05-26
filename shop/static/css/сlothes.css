@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+body{
+    .card{
+        padding-inline: 40px;
+        width: 19%;
+        margin-left: 30px;
+        height: 600px;
+        background-color: aqua;
+        border-radius: 10px;
+        padding-top: 50px;
+        .minibox{
+            
+            h4{
+                text-align: center;
+                margin-top: -20px;
+            }
+            p{
+                width: 100%;
+                overflow-wrap: break-word; 
+                word-wrap: break-word;
+            }
+            h1{
+                text-align: center;
+            }
+        }
+        .long{
+            width: 288px;
+            height: 384px;
+            border-radius: 5px;
+        }
+    }
+}
