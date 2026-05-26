@@ -26,10 +26,10 @@ SECRET_KEY = 'django-insecure-a(zb&ig&%bp*7(3tz!nr_(hu54$39brqvi9uqfjjq4*x_7qvdr
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'shop-1or1.onrender.com',
-    '127.0.0.1',
-    'localhost',
-]
+'65streetshop.duckdns.org',
+'.onrender.com', 
+'localhost',
+'127.0.0.1']
 
 
 # Application definition
