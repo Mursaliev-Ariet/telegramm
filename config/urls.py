@@ -5,7 +5,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='clothes_list.html')),
+    path('', TemplateView.as_view(template_name='Clothes/clothes_list.html')),
     path('admin/', admin.site.urls),
 ]
 if settings.DEBUG:
