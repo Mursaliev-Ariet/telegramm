@@ -9,7 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div class="container">
+    <header>
+        <form method="get">
+        <input type="text" name="search" placeholder="Поиск по имени">
+        <button type="submit">Поиск</button>
+        <h1>Одежда в наличии</h1>
+    </form>
+    </header>
+    <div class="container">
 {% for clothes in clothes_list %}
 <div class="card">
     {% if clothes.photo %}
