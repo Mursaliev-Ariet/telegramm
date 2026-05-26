@@ -7,19 +7,19 @@ body{
         padding-inline: 40px;
         width: 19%;
         margin-left: 30px;
-        height: 600px;
+        height: auto;
         background-color: aqua;
         border-radius: 10px;
         padding-top: 50px;
         .minibox{
-            
+
             h4{
                 text-align: center;
                 margin-top: -20px;
             }
             p{
                 width: 100%;
-                overflow-wrap: break-word; 
+                overflow-wrap: break-word;
                 word-wrap: break-word;
             }
             h1{
@@ -27,8 +27,8 @@ body{
             }
         }
         .long{
-            width: 288px;
-            height: 384px;
+            width: 100%;
+            height: auto;
             border-radius: 5px;
         }
     }
