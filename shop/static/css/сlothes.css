@@ -48,22 +48,24 @@ body{
     width: 48%;             
     background-color: #00ffff;
     border-radius: 12px;
-    padding: 10px;          
+    padding: 10px;
     box-sizing: border-box;
     text-align: center;
     margin-bottom: 10px;
     .long{
     width: 100%;
     height: auto;
-    max-height: 150px;      
+    max-height: 150px;
     object-fit: contain;
     border-radius: 6px;
     margin-bottom: 10px;
     }
-    .card h3, .card p {
-    font-size: 14px;       
+    .card h4, .card p {
+    font-size: 14px;
     margin: 5px 0;
-    word-wrap: break-word;  
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
     }
     }
 @media (min-width: 769px) {
