@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ой! Страница не найдена | Наш Магазин</title>
+    <link rel="stylesheet" href="{% static 'css/officiant.css' %}">
+</head>
+<body>
+{% for officiant in officiants_list %}
+    <h1>{{ officiant.name }}</h1>
+{% endfor %}
+</body>
+</html>
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Одежда</title>
+    <link rel="stylesheet" href="{% static 'css/clothes.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <form method="get">
+        <input type="text" name="search" placeholder="Поиск по названию">
+        <button type="submit">Поиск</button>
+        <h1>Одежда в наличии</h1>
+    </form>
+    </header>
+    <div class="container">
+{% for clothes in clothes_list %}
+<div class="card">
+    {% if clothes.image %}
+            <img src="{{ clothes.image.url }}" alt="{{ clothes.title }}" class="long">
+        {% else %}
+            <img src="/static/images/no-image.png" alt="Нет фото" class="long">
+        {% endif %}
+    <div class="minibox">
+            <h1>{{ clothes.name }}</h1>
+            <h4>{{ clothes.price }}</h4>
+            <p>{{ clothes.text }}</p>
+    </div>
+</div>
+{% endfor %}
+</div>
+<div class="wall">
+    <div class="box">
+        <a href="{% url 'officiants_list' %}">Оффицианты</a>
+    </div>
+</div>
+</body>
+</html>
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+}
+body{
+    header{
+        color: rgb(0, 119, 255);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(20px);
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        input{
+            width: 70%;
+            max-width: 600px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+        button{
+            width: 25%;
+            max-width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(0, 213, 255);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+    .card {
+    width: 48%;
+    background-color: #00ffff;
+    border-radius: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 10px;
+    p{
+    font-size: 14px;
+    margin: 5px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    }
+    }
+@media (min-width: 769px) {
+    header {
+        text-align: center;
+
+        input {
+            width: 500px;
+        }
+    }
+    .container {
+        gap: 2%;
+        padding: 20px;
+    }
+
+    .card {
+        width: 23.5%;
+        padding: 15px;
+    }
+
+    .long{
+        max-height: 250px;
+    }
+
+    .card h4 {
+        font-size: 20px;
+    }
+}
+.wall{
+    animation: left 1s alternate ease-in-out;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(1000px);
+    background-color: rgba(179, 179, 179, 0.7);
+    width: 15%;
+    height: 100%;
+    text-align: start;
+    box-sizing: border-box;
+    .box{
+        width: 100%;
+        height: 40px;
+        padding-top: 10px;
+        a{
+            padding-left: 50px;
+            font-size: 23px;
+            text-decoration: none;
+    }
+    }
+}
+}
+@keyframes left {
+    0%{
+        transform: translateX(-300px)
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+996 501 411 240
