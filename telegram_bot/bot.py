@@ -64,17 +64,12 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 def main():
-
     app = Application.builder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("help", help_command))
-
     app.add_handler(CallbackQueryHandler(button))
 
-    print("Бот запущен")
-    app.run_polling()
+    print("Bot started")
 
-
-if __name__ == "__main__":
-    main()
+    app.run_polling(drop_pending_updates=True)
