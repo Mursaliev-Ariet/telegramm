@@ -5,9 +5,8 @@ from telegram.ext import (
     CallbackQueryHandler,
     ContextTypes
 )
-import os
 
-TOKEN = os.getenv("TOKEN")
+TOKEN = "8649785856:AAH6EGjgrCEPiE2D25kEL1JPEX4NTAMMINY"
 
 cats = {
     "mainecoon": {
