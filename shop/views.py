@@ -32,6 +32,7 @@ class FlowerListAPIView(ListCreateAPIView):
         if search:
             return Flower.objects.filter(name__icontains=search)
         return Flower.objects.all()
+
 class FlowerDetailAPIView(RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
     queryset = Flower.objects.all()
