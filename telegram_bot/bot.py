@@ -3,8 +3,7 @@ from telegram.ext import Application, CommandHandler, CallbackQueryHandler, Cont
 
 import os
 
-TOKEN = os.getenv("8649785856:AAH6EGjgrCEPiE2D25kEL1JPEX4NTAMMINY")
-
+TOKEN = os.getenv("TOKEN")
 # =======================
 # 📚 ДАННЫЕ ПОРОД
 # =======================
